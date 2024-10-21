@@ -1,0 +1,100 @@
+.running-line-wrapper {
+    margin: auto;
+    width: 110%;
+    height: 120px;
+    overflow: hidden;
+    background-color: var(--pink-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__top {
+        position: relative;
+        top: -165px;
+        left: -10px;
+        right: -10px;
+        transform: rotate(4.5deg);
+        background-color: var(--coral-dark);
+
+        @include quad {
+            transform: rotate(0deg);
+            top: -98px;
+        }
+    }
+    &__webinars_top {
+        position: relative;
+        top: 188px;
+        bottom: 0;
+        left: -10px;
+        right: -10px;
+        transform: rotate(-5.5deg);
+        background-color: var(--tangerine);
+
+        @include quad {
+            transform: rotate(0deg);
+            top: 88px;
+        }
+    }
+    &__gaming_bottom {
+        transform: rotate(-5.5deg);
+        position: relative;
+        bottom: 0;
+        left: -10px;
+        right: -10px;
+        background-color: var(--turquoise);
+        // top: 0px;
+    }
+ }
+ .running-line {
+
+    padding: 20px 0;
+    font-family: var(--font-text);
+    font-weight: 600;
+    font-size: 58px;
+    line-height: 120%;
+    color: var(--white);
+    white-space: nowrap;
+
+    &__top {
+        
+        padding: 20px 0;
+        font-family: var(--font-text);
+        color: var(--black);
+        font-weight: 600;
+        line-height: 120%;
+
+        .icon--star {
+            margin: 0 20px;
+            width: 40px;
+            height: 40px;
+            fill: var(--black);
+        }
+    }
+
+    &__footer {
+        padding: 20px 0;
+        font-family: var(--font-text);
+        color: var(--white);
+        font-weight: 600;
+        line-height: 120%;
+
+        .icon--star {
+            margin: 0 20px;
+            width: 40px;
+            height: 40px;
+            fill: var(--white);
+        }
+    }
+ }
+ .running-line {
+    animation: run 12s linear infinite;
+ }
+ @keyframes run {
+    from {
+       transform: translateX(0%);
+    }
+    /* Magic is here. This is the width of the elem with text after rendering the page */
+    to {
+       transform: translateX(-1683.35px);
+    }
+ }

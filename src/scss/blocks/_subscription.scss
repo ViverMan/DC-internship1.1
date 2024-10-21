@@ -1,0 +1,305 @@
+.subscription {
+    margin-top: 0px;
+    margin-bottom: 80px;
+    padding: 0 32px;
+
+    @include medium {
+        padding: 0 8px;
+        margin-top: -50px;
+    }
+    .container {
+        position: relative;
+        background-image: url('./../../img/subscription/bg-big.png');
+        background-position: center center; /* x y */
+        background-size: 100% 100%;
+        background-repeat: no-repeat; 
+        z-index: 1;
+        padding: 0;
+
+        @include tablet {
+            background-image: url('./../../img/subscription/bg-medium.png');
+            background-position: left center; /* x y */
+            background-size: 78% 100%;
+            overflow: hidden;
+            border-radius: 40px;
+
+            &::before {
+                content: url('./../../img/subscription/line-bg-sub.png');
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                overflow-x: hidden;
+                overflow-y: hidden;
+            }
+        }
+
+        @include mediumS {
+            background-image: url('./../../img/subscription/bg-small.png');
+            background-position: 100% 100%; /* x y */
+
+            background-size: 100% 100%;
+            overflow: scroll;
+            border-radius: 0;
+        }
+    }
+
+    .container::after {
+        content: '';
+        position: absolute;
+        background-image: url('./../../img/subscription/bg-left-big.png');
+        background-repeat: no-repeat; 
+        background-position: right center; /* x y */
+        background-size: 416px 100%;
+        z-index: 2;
+
+        right: 0px;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        @include mobile {
+            background-image: url('./../../img/subscription/bg-left-small.png');
+            background-size: 288px 100%;
+        }
+
+        @include mediumS {
+            background-image: url('./../../img/subscription/bg-left-medium.png');
+            background-position: bottom center; /* x y */
+            background-size: 100% 400px;
+            z-index: 2;
+            bottom: 0;
+            right: 0;
+        }   
+    }
+}
+
+.subscription__wrapper {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    max-width: 624px;
+    height: 100%;
+    gap: 88px;
+    padding: 104px 10px 104px 64px;
+    
+
+    @include tablet {
+        padding: 40px 10px 40px 24px;
+        max-width: 600px;
+    }
+    @media (max-width: 1076px) {
+		max-width: 430px;
+	}
+
+    @include mobile {
+        max-width: 420px;
+    }
+    @include mediumS {
+        padding: 60px 24px 480px 24px;
+        max-width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.subscription__desc {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    
+}
+.subscription__title {
+    font-family: var(--font-text);
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 120%;
+    color: var(--white);
+
+    @include mobile {
+        font-size: 26px;
+        text-wrap: balance;
+    }
+
+}
+.subscription__text {
+    font-family: var(--font-main);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    color: var(--white);
+    text-wrap: wrap;
+}
+.subscription__form_confirm {
+    padding-top: 58px;
+    display: none;
+    
+    .form_confirm-item {
+        position: relative;
+        border-radius: 88px;
+        background-color: var(--white);
+        
+        @media (max-width: 1076px) {
+            border-radius: 24px;
+            max-width: 280px;
+        }
+        
+        
+        .form_confirm-text {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 160%;
+            color: var(--turquoise-dark) ;
+            padding: 10px 0 10px 24px;
+            
+            @media (max-width: 1076px) {
+                border-radius: 24px;
+                max-width: 280px;
+                text-wrap: balance;
+                padding: 28px 0 28px 24px;
+            }
+        }
+        .form_confirm-img {
+            position: absolute;
+            top: -60px;
+            right: 64px;
+            
+            @media (max-width: 1076px) {
+                width: 104px;
+                height: 104px;
+                top: -32px;
+                right: -24px;
+            }
+            
+            @include mobile {
+                right: -16px;
+            }
+        }
+    }
+}
+.sub-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    
+    .sub-valid {
+        display: flex;
+        gap: 16px;
+        
+        @include tablet {
+            flex-direction: column;
+        }
+    }
+}
+.sub-input {
+    border: 2px solid white;
+    border-radius: 88px;
+    padding: 10px 24px;
+    color: var(--white);
+    height: 49px;
+    transition: all 0.2s ease-in;
+    
+    @include tablet {
+        width: 280px;;
+    }
+    @include mediumS {
+        width: 100%;
+    }
+
+    &:focus {
+        border: 2px solid var(--black);
+    }
+    
+    &::placeholder {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 160%;
+        color: var(--pale);
+    }
+}
+.sub-valid_icon {
+    position: relative;
+    width: max-content;
+    @include mediumS {
+        width: 100%;
+    }
+}
+.sub-btn {
+    font-family: var(--font-main);
+    background-color: var(--coral-dark);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 160%;
+    height: 49px;
+    transition: all 0.2s ease-in;
+
+    &:hover {
+        background-color: var(--black);
+    }
+    &:focus {
+        border: 2px solid var(--black);
+    }
+}
+
+.sub-check {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.sub-label {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+.fake {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background-color: var(--white);
+    position: relative;
+}
+.fake::before {
+    content: url('./../../img/subscription/cheked.svg');
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    opacity: 0;
+    transition: all 0.2s ease-in;
+}
+
+.sub-checkbox:checked + .fake::before {
+    opacity: 1;
+}
+
+.sub-checkbox-text {
+    font-family: var(--font-main);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 140%;
+    color: var(--white);
+    
+    @include tablet {
+        font-size: 13px;
+    }
+}
+
+.sub-checkbox {
+    display: none;
+}
+.subscription__form {
+    margin-top: auto;
+    display: block;
+}
+.subscription__form_disp-none {
+    display: none;
+}
+.subscription__form_disp-block {
+    display: block;
+}

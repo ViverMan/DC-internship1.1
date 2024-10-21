@@ -1,0 +1,109 @@
+.icons-wrapper {
+	padding: 30px 0;
+	display: flex;
+	column-gap: 30px;
+}
+
+.icon {
+	fill: transparent;
+	stroke: transparent;
+	width: 20px;
+	height: 20px;
+}
+
+.icon--search {
+	fill: var(--black);
+}
+.icon--logo {
+	width: 109px;
+	height: 40px;
+	fill: var(--black);
+	transition: all 0.2s ease-in;
+
+	&:hover {
+		fill: var(--pink-dark); 
+	}
+}
+.icon--arrow {
+	width: 16px;
+	height: 16px;
+	fill: var(--grass);
+}
+.icon--date {
+	width: 17px;
+	height: 17px;
+	fill: var(--gray35);
+}
+.icon--time {
+	width: 17px;
+	height: 17px;
+	fill: var(--gray35);
+}
+.icon--star {
+	width: 40px;
+	height: 40px;
+	fill: var(--black);
+}
+.icon--logo-footer {
+	width: 224px;
+	height: 82px;
+	fill: var(--white);
+
+	transition: all 0.2s ease-in;
+
+	&:hover {
+        fill: var(--pink-dark);
+    }
+
+	@include tablet {
+		width: 173px;
+		height: 64px;
+	}
+}
+.icon--instagram, 
+.icon--facebook,
+.icon--youtube,
+.icon--in {
+	width: 32px;
+	height: 32px;
+	fill: var(--gray70);
+	transition: all 0.2s ease-in;
+
+	&:hover {
+		fill: var(--gray35);
+	}
+
+	@include medium {
+		width: 48px;
+		height: 48px;
+	}
+}
+.icon--confirm {
+	display: none;
+	position: absolute;
+	top: 12px;
+	right: 12px;
+	width: 25px;
+	height: 25px;
+}
+.icon--error {
+	display: none;
+	position: absolute;
+	top: 12px;
+	right: 12px;
+
+	width: 25px;
+	height: 25px;
+}
+
+.display-block {
+	display: block;
+}
+.icon--footer-arrow {
+	width: 13px;
+	height: 7px;
+	fill: var(--white);
+}
+
+
+

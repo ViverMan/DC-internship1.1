@@ -1,0 +1,49 @@
+.title-1 {
+	margin: 1em 0 0.5em;
+	font-size: 38px;
+	font-weight: 700;
+	font-family: var(--font-titles);
+}
+
+.title-2 {
+	font-weight: 400;
+	font-size: 46px;
+	line-height: 120%;
+	color: var(--white);
+	font-family: var(--font-text);
+
+	@include mobile {
+		font-size: 28px;
+	}
+}
+
+.title-3 {
+	font-weight: 400;
+	font-size: 36px;
+	line-height: 120%;
+	font-family: var(--font-text);
+
+	@include tablet {
+		font-size: 26px;
+	}
+}
+
+.title-4 {
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 120%;
+	color: var(--black);
+	font-family: var(--font-text);
+
+	@include tablet {
+		font-size: 26px;
+	}
+}
+
+.title-6 {
+	font-weight: 500;
+	font-size: 13px;
+	line-height: 160%;
+	text-transform: uppercase;
+	color: var(--gray35)
+}

@@ -1,0 +1,262 @@
+.btn {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    padding: 8px;
+    border-radius: 40px;
+
+    font-family: var(--font-main);
+    font-size: 18px;
+    line-height: 160%;
+    font-weight: 700;
+
+        @include mediumS {
+            width: 100%;
+        }
+}
+
+.webinars__btn {
+    background-color: var(--violet-dark);
+    color: var(--white);
+    padding: 17.5px 0;
+    transition: all 0.2s ease-in;
+
+    &:hover {
+        background-color: var(--pink-dark);
+    }
+}
+.btn-small {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+    padding: 8px 8px;
+    transition: all 0.2s ease-in;
+
+    font-family: var(--font-main);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 140%;
+
+    &:hover {
+        padding: 8px 18px;
+    }
+    &:focus {
+        padding: 8px 18px;
+    }
+    @include tablet {
+        padding: 8px 10px;
+
+        &:focus {
+            padding: 8px 10px;
+        }
+        &:hover {
+            padding: 8px 10px;
+            transform: scale(1.1);  
+        }
+    } 
+}
+.btn-small__pink {
+    color: var(--pink-dark);
+
+    &:hover {
+        background-color: var(--pink);
+        color: var(--black);
+    }
+    &:focus {
+        background-color: var(--pink);
+        color: var(--black);
+    }
+}
+.btn-small__grass {
+    color: var(--grass-dark);
+
+    &:hover {
+        background-color: var(--grass);
+        color: var(--black);
+    }
+    &:focus {
+        background-color: var(--grass);
+        color: var(--black);
+    }
+}
+.btn-small__tangerine {
+    color: var(--tangerine-dark);
+
+    &:hover {
+        background-color: var(--tangerine);
+        color: var(--black);
+    }
+    &:focus {
+        background-color: var(--tangerine);
+        color: var(--black);
+    }
+}
+.btn-small__turquoise {
+    color: var(--turquoise-dark);
+
+    &:hover {
+        background-color: var(--turquoise);
+        color: var(--black);
+    }
+    &:focus {
+        background-color: var(--turquoise);
+        color: var(--black);
+    }
+}
+
+.fashion-nav__left {
+    .fashion__nav-item {
+        .btn-small__grass {
+            color: var(--marine-dark);
+        
+            &:hover {
+                background-color: var(--marine);
+                color: var(--black);
+            }
+            &:focus {
+                background-color: var(--marine);
+                color: var(--black);
+            }
+
+            @include tablet {
+                color: var(--grass-dark);
+        
+                &:hover {
+                    background-color: var(--grass);
+                    color: var(--black);
+                }
+                &:focus {
+                    background-color: var(--grass);
+                    color: var(--black);
+                }
+            }
+        
+            @include medium {
+                padding: 8px 10px;
+                color: var(--tangerine-dark);
+        
+                &:hover {
+                    padding: 8px 18px;
+                    background-color: var(--tangerine);
+                    color: var(--black);
+                }
+                &:focus {
+                    padding: 8px 18px;
+                    background-color: var(--tangerine);
+                    color: var(--black);
+                }
+            }
+        }
+    }
+}
+.fashion-nav__right {
+    .fashion__nav-item {
+        .btn-small__grass {
+            color: var(--pink-dark);
+        
+            &:hover {
+                background-color: var(--pink);
+                color: var(--black);
+            }
+            &:focus {
+                background-color: var(--pink);
+                color: var(--black);
+            }
+
+            @include small {
+                padding: 8px 10px;
+        
+                &:hover {
+                    padding: 8px 18px;
+                }
+                &:focus {
+                    padding: 8px 18px;
+                }
+            }
+
+        }
+    }
+}
+
+
+
+.btn-coral {
+    background-color: var(--coral-dark);
+    border: 2px solid var(--coral-dark);
+    color: var(--whiteTR90);
+    transition: all 0.2s ease-in;
+    
+    &:hover {
+        background-color: var(--black);
+        border: 2px solid var(--black);
+        color: var(--white);
+    }
+    
+    &:focus {
+        border: 2px solid var(--black);
+    }
+}
+
+.btn-violet {
+    background-color: var(--violet-dark);
+    border: 2px solid var(--violet-dark);
+    color: var(--whiteTR90);
+    transition: all 0.2s ease-in;
+
+    &:hover {
+        background-color: var(--pink-dark);
+        border: 2px solid var(--pink-dark);
+        color: var(--white);
+    }
+
+    &:focus {
+        border: 2px solid var(--white);
+    }
+}
+
+.btn-grass {
+    width: 232px;
+    padding: 13px 0;
+    background-color: var(--grass);
+    border: 2px solid var(--grass);
+    color: var(--black);
+    outline: 1.50px solid var(--black);
+    outline-offset: -5px;
+    transition: all 0.2s ease-in;
+
+    &:hover {
+        background-color: var(--black);
+        border: 2px solid var(--black);
+        color: var(--white);
+    }
+
+    &:focus {
+        border: 2px solid var(--black);
+        outline: none;
+        outline-offset: none;
+    }
+    @include small {
+        width: 100%;
+    }
+}
+
+.btn-black {
+    width: 240px;
+    border: 2px solid var(--white);
+    background-color: none;
+    color: var(--white);
+    transition: all 0.2s ease-in;
+
+    &:hover {
+        background-color: var(--white);
+        color: var(--black);
+    }
+
+    &:focus {
+        border: 2px solid var(--white);
+    }
+}

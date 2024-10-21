@@ -1,0 +1,214 @@
+.marketing {
+    position: relative;
+    z-index: 1;
+    margin-top: 136px;
+
+    @include mobile {
+        margin-top: 104px;
+    }
+}
+.marketing-wrapper {
+    display: flex;
+    gap: 40px;
+
+    @include tablet {
+        gap: 24px;
+    }
+
+    @include medium {
+        gap: 104px;
+        flex-direction: column;
+    }
+}
+.marketing-block {
+    height: 100%;
+    width: 50%;
+    
+    @include mobile {
+        width: 100%;
+    }
+}
+.marketing-images {
+    position: relative;
+    margin-bottom: 32px;
+
+    @include medium {
+        margin-bottom: 24px;
+    }
+}
+.marketing-img__wrapper {
+    height: 100%;
+}
+.marketing-img-ph {
+    mask-image: url('./../../img/masks/mask10.png');
+    mask-repeat: no-repeat;
+    mask-position: top;  
+    mask-size: cover;
+    width: 100%;
+
+    &__mobile {
+        display: none;
+    }
+
+    @include medium {
+        display: none;
+
+        &__mobile {
+            display: block;
+            mask-image: url('./../../img/masks/mask6.png');
+            mask-repeat: no-repeat;
+            mask-position: top;  
+            mask-size: cover;
+            width: 100%;
+        }
+    }
+}
+
+.marketing-img-cam {
+    mask-image: url('./../../img/masks/mask11.png');
+    mask-repeat: no-repeat;
+    mask-position: top;  
+    mask-size: cover;
+    width: 100%;
+
+    &__mobile {
+        display: none;
+    }
+
+    @include medium {
+        display: none;
+        
+        &__mobile {
+            display: block;
+            mask-image: url('./../../img/masks/mask5.png');
+            mask-repeat: no-repeat;
+            mask-position: top;  
+            mask-size: cover;
+            width: 100%;
+        }
+    }
+}
+
+
+.marketing-sticker {
+    position: absolute;
+    transition: all 0.3s ease-in;
+
+    &__mobile-left {
+        display: none;
+    }
+
+    &__right {
+        top: -47px;
+        right: -40px;
+
+
+        @include tablet {
+            top: 8px;
+            right: 8px;
+
+            width: 104px;
+            height: 104px;
+        }
+        @include medium {
+            top: 8px;
+            left: 8px;
+        }
+
+        &:hover {
+            transform: rotate(-180deg);
+        }
+    }
+
+    &__left {
+        top: -76px;
+        left: -55px;
+        transition: all 0.1s ease-in;
+
+        @include tablet {
+            display: none;
+        }
+
+        &:hover {
+            transform: rotate(30deg);
+        }
+    }
+}
+
+.marketing-sticker__mobile-left {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    transition: all 0.1s ease-in;
+    
+    &:hover {
+        transform: rotate(30deg);
+    }
+    @include tablet {
+        display: block;
+    }
+    @include mobile {
+        width: 144px;
+        height: 89px;
+    }
+}
+.marketing-sticker__small {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+
+    width: 160px;
+    height: 90px;
+
+    @include mobile {
+        display: block;
+    }
+}
+
+.marketing__nav-list {
+    display: flex;
+    gap: 8px;
+
+    @include medium {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    @include tablet {
+        gap: 0;
+    }
+}
+.marketing__info-title {
+    font-size: 30px;
+    margin-bottom: 16px;
+}
+.marketing__info-text {
+    margin-bottom: 16px;
+    max-width: 480px;
+    font-family: var(--font-main);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    color: var(--gray70);
+}
+.marketing__info-timing {
+    display: flex;
+    gap: 24px;
+
+    .timing-block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+
+        p {
+            font-family: var(--font-main);
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 140%;
+            color: var(--gray35);
+        }
+    }
+}

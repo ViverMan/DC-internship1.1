@@ -1,0 +1,48 @@
+:root {
+	--container-width: 1244px;
+	--container-padding: 36px;
+	--container-padding-mobile: 8px;
+
+	--font-main: 'Nunito', sans-serif;
+	--font-text: 'Archivo Black', sans-serif;
+	--font-titles: var(--font-accent);
+
+    --laptop-size: 1199px;
+	--tablet-size: 959px;
+	--mobile-size: 599px;
+
+	//------- main colors---------//
+	--black: #1B1F21;
+	--gray80: #434343;
+	--gray70: #757778;
+	--gray35: #AEAEAE;
+	--gray20: #D9D9D8;
+	--gray15: #E8E8E8;
+	--gray5: #F2F2F2;
+	--gray5TR20: #F2F2F2;
+	--white: #FCFAF9;
+	--whiteTR90: #FCFAF9;
+	--pale: #E8E8E8;
+
+	//-------tag colors -----------//
+	--pink: #EC95B1;
+	--sky: #A4CCFE;
+	--violet: #D0B0FA;
+	--grass: #BEDB39;
+	--turquoise: #ACD6DE;
+	--tangerine: #FFAD20;
+	--coral: #FE8968;
+	--mint: #AEDFD6;
+	--marine: #90EECB;
+
+	//-------text colors ----------//
+	--pink-dark: #DA3369;
+	--sky-dark: #5FA5FD;
+	--violet-dark: #9853F4;
+	--grass-dark: #94AC23;
+	--turquoise-dark: #57ACBC;
+	--tangerine-dark: #EF9700;
+	--coral-dark: #FE6D44;
+	--mint-dark: #57BCAA;
+	--marine-dark: #22C98B;
+}

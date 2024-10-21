@@ -1,0 +1,207 @@
+.webinars {
+    color: var(--white);
+    background-color: var(--black);
+    background-image: url('./../../img/marketing/bg.jpg');
+    background-position: center center; /* x y */
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    
+
+    padding-top: 380px; 
+    padding-bottom: 380px;
+    overflow-x: hidden;
+}
+
+.webinars__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // align-items: center;
+}
+.webinars__title {
+    // padding-top: 100px;
+    display: flex;
+    justify-content: space-between;
+
+    .webinars__btn-top {
+        @include medium {
+            display: none;
+        }
+    }
+
+    @include medium {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.webinars__btn {
+}
+.webinars__cards {
+    padding-top: 85px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+
+    @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+
+        .card-3 {
+            grid-column: 1 / 3;
+        }
+    }
+    @include medium {
+        .card-1 {
+            grid-column: 1 / 3;
+        }
+        .card-2 {
+            grid-column: 1 / 3;
+        }
+    }    
+}
+
+.webinars__card {
+    width: 100%;
+    padding: 32px;
+    border-radius: 32px;
+    @include tablet {
+        padding: 24px;
+    }
+}
+.card-1 {
+    background-color: var(--turquoise-dark);
+    background-image: url('./../../img/webinars/line-bg-card1.png');
+    background-position: center center; /* x y */
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+.card-2 {
+    background-color: var(--coral-dark);
+    background-image: url('./../../img/webinars/line-bg-card2.png');
+    background-position: center center; /* x y */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.card-3 {
+    background-color: var(--tangerine-dark);
+    background-image: url('./../../img/webinars/line-bg-card3.png');
+    background-position: center center; /* x y */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.card__specialist {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 45px;
+
+    span {
+        margin: auto 0;
+    }
+
+    img {
+        width: 64px;
+        height: 64px;
+    }
+
+}
+.specialist__photo {
+    mask-image: url('./../../img/masks/mask15.png');
+    mask-repeat: no-repeat;
+    mask-position: top;  
+    mask-size: cover;
+    width: 100%;
+}
+.specialist__name {
+    font-family: var(--font-text);
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 120%;
+    color: var(--white);
+
+    @include medium {
+        font-size: 22px;
+    }
+}
+.specialist__speciality {
+    font-family: var(--font-main);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 140%;
+    color: var(--white);
+}
+.card__text {
+    font-family: var(--font-text);
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 120%;
+    color: var(--white);
+
+    @include medium {
+        font-size: 24px;
+    }
+}
+.card__info {
+    padding-top: 40px;
+    display: flex;
+    gap: 26px;
+}
+.info__when {
+}
+.info__what {
+}
+.card__data-time {
+    padding-top: 12px;
+    display: flex; 
+
+    width: 100%;
+    gap: 22px;
+    p {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 140%;
+        color: var(--white);
+    }
+
+    .icon {
+        fill: var(--white);
+        width: 17px;
+        height: 17px;
+    }
+    
+}
+.date-time__date {
+    display: flex;
+    flex-direction: row;
+    
+    .date-svg {
+        flex-shrink: 0;
+        margin-right: 8px;
+    }
+}
+.date-time__time {
+    display: flex;
+
+    .date-svg {
+        width: 17px;
+        height: 17px;
+        margin-right: 8px;
+    }
+}
+
+.webinars__title-btn {
+    display: none;
+
+    @include medium {
+        display: block;
+        padding-top: 64px;
+
+        .webinars__btn-bottom {
+            width: 100%;
+            padding: 17px 0;
+        } 
+    }
+}

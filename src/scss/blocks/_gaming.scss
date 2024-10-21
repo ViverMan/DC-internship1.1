@@ -1,0 +1,327 @@
+.gaming {
+    margin-top: 80px;
+    margin-bottom: 100px;
+    overflow-y: hidden;
+
+    @include tablet {
+        margin-top: 48px;
+    }
+
+    @include mobile {
+        margin-top: 24px;
+    }
+    overflow-x: hidden;
+}
+.gaming__wrapper {
+    display: flex;
+    width: 100%;
+    gap: 40px;
+
+    @include tablet {
+        flex-direction: column;
+        gap: 24px;
+    }
+    @include mobile {
+        gap: 12px;
+    }
+}
+.gaming__left-block {
+    width: 100%;
+    max-width: 480px;
+    
+    .main-img {
+        mask-image: url('./../../img/masks/mask1.png');
+        mask-repeat: no-repeat;
+        mask-position: top;  
+        mask-size: cover;
+        width: 100%;
+    }
+
+    .mobile-img {
+        display: none;
+    }
+    position: relative;
+
+    .main-img__stickers {
+        position: absolute;
+        z-index: 20;
+        width: 180px;
+        height: 180px;
+        top: 0;
+        right: 0;
+        transition: all 0.3s ease-in;
+
+        &:hover {
+            transform: rotate(180deg);
+        }
+    }
+
+    @include tablet {
+        width: 100%;
+        max-width: none;
+
+        .mobile-img {
+            display: block;
+            width: 100%;
+            mask-image: url('./../../img/masks/mask2.png');
+            mask-repeat: no-repeat;
+            mask-position: top;
+            mask-size: cover;
+        }
+        .main-img {
+            display: none;
+        }
+        .main-img__stickers {
+            width: 120px;
+            height: 120px;
+        }
+    }
+    @include small {
+        .mobile-img {
+            display: none;
+        }
+        .main-img {
+            display: block;
+            width: 100%;
+        }
+        .main-img__stickers {
+            width: 104px;
+            height: 104px;
+        }
+    }
+}
+.gaming_grid {
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(3, auto);
+    display: grid;
+
+    .gaming_grid-1 {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        align-self: end;
+    }
+    .gaming_grid-2 {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        align-self: end;
+    }
+    .gaming_grid-3 {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        align-self: end;
+    }
+    .gaming_grid-4 {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+    }
+
+    @include tablet {
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3, auto);
+
+        column-gap: 24px;
+        
+        .gaming_grid-1 {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+
+            @include tablet {
+                align-self: start;
+
+            }
+        }
+        .gaming_grid-2 {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+
+            @include tablet {
+                // justify-self: end;
+                align-self: start;
+            }
+        }
+        .gaming_grid-3 {
+            grid-column: 2 / 3;
+            grid-row: 1 / 3;
+        }
+        .gaming_grid-4 {
+            grid-column: 1 / 3;
+            grid-row: 3 / 4;
+
+            @include tablet {
+                justify-self: center;
+            }
+        }
+    }
+    @include medium {
+        grid-template-columns: repeat(1, auto);
+        .gaming_grid-1 {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+        .gaming_grid-2 {
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+            align-self: end;
+        }
+        .gaming_grid-3 {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+            align-self: end;
+        }
+        .gaming_grid-4 {
+            grid-column: 1 / 2;
+            grid-row: 4 / 5;
+
+            @include small {
+                justify-self: normal;
+            }
+        }
+    }
+}
+
+.nav-list_grid {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(1, auto);
+    justify-content: start;
+
+    @include tablet {
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(2, auto);
+        column-gap: 0px;
+    }
+    @include medium  {
+        grid-template-columns: repeat(4, auto);
+        grid-template-rows: repeat(1, auto);  
+        justify-content: space-between; 
+    }
+
+    .nav-list_grid-item1 {
+        @include tablet {
+            grid-column: 3 / 4;
+            grid-row: 1 / 2;
+        }
+        @include medium  {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+    }
+    .nav-list_grid-item2 {
+        @include tablet {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+        }
+        @include medium  {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+        }
+    }
+    .nav-list_grid-item3 {
+        @include tablet {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+        }
+        @include medium  {
+            grid-column: 3 / 4;
+            grid-row: 1 / 2;
+        }
+    }
+    .nav-list_grid-item4 {
+        @include tablet {
+            grid-column: 3 / 4;
+            grid-row: 2 / 3;
+        }
+        @include medium  {
+            grid-column: 4 / 5;
+            grid-row: 1 / 2;
+        }
+    }
+}
+
+.gaming__nav-list {
+    @include medium {
+        padding-bottom: 16px;
+    }
+}
+
+.gaming__info-timing {
+    display: flex;
+    gap: 24px;
+    @include tablet {
+        flex-direction: column;
+        align-items: end;
+        gap: 8px;
+    }
+    @include medium {
+        flex-direction: row;
+        gap: 24px;
+        padding-top: 16px;
+    }
+
+    .timing-block {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+
+        p {
+            font-family: var(--font-main);
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 140%;
+            color: var(--gray35);
+        }
+
+        @include tablet {
+            
+            svg {
+                order: 2;
+            }
+            p {
+                order: 1;
+            }    
+        }
+        @include medium {
+            svg {
+                order: 1;
+            }
+            p {
+                order: 2;
+            } 
+        }
+    }
+}
+
+.gaming__info-text {
+    padding-top: 16px;
+    font-family: var(--font-main);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    color: var(--gray70);
+
+    @include tablet {
+        padding-top: 8px;
+    }
+    @include medium {
+        padding-top: 16px;
+    }
+}
+.gaming__btn {
+    align-items: center;
+    padding-top: 48px;
+    @include tablet {
+        padding-top: 56px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
